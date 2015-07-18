@@ -2,16 +2,42 @@ extends layout
 
 block content
 
-
   h1 TRADIER
   a(href='/') Back
   br
-  if res
-    p Symbol:
-      | #{res.symbol}
-    p= res.bid
-    p= res.ask
-    h4 Full Response Below
-    each val in res
-      p= val
-      p= val.symbol
+  if warning
+    p= warning
+  form(action='/tradier' method='post')
+    label Ticket Search
+    input(type='text' name='search' placeholder='Ticker Search')        
+  div(id='large') 
+    if res
+      table
+        thead
+          td SYMBOL
+          td TYPE
+          td BID
+          td ASK
+          td OPEN
+          td CLOSE
+          td CHANGE
+          td LOW
+          td HIGH
+          td AVG VOLUME
+          td 52 HIGH
+          td 52 LOW
+          td % CHANGE
+        tr
+          td= res.symbol
+          td= res.type
+          td= res.bid
+          td= res.ask
+          td= res.open
+          td= res.close
+          td= res.change
+          td= res.low
+          td= res.high
+          td= res.average_volume
+          td= res.week_52_high
+          td= res.week_52_low
+          td= res.change_percentage

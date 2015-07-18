@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req,res,next){
   var query = req.body.search;
   var req = unirest.get('http://www.enclout.com/api/v1/yahoo_finance/show.json?auth_token=' + process.env.KEY + '&text=' + query)
-    .header("X-Mashape-Key", "jatokGS4ySmshq7MUKkwu1N7bBYsp1QGs1ejsnbBUtPrUxsFNL")
+    .header("X-Mashape-Key", process.env.KEY3)
     .header("Accept", "application/json")
     .end(function (result) {
     console.log(result.body);
@@ -24,20 +24,24 @@ router.post('/', function(req,res,next){
 })
 })
 
-
 router.get('/tradier', function(req,res,next){
-  var req = unirest.get("https://sandbox.tradier.com/v1/markets/quotes?symbols=spy")
-    .header("Authorization", 'Bearer eegDvVowTJGwUm22DXJVN5XMQh7u')
-    .header("X-Mashape-Key", "jatokGS4ySmshq7MUKkwu1N7bBYsp1QGs1ejsnbBUtPrUxsFNL")
-    .header("Accept", "text/plain")
-    .end(function (result) {
-      parser.on('end', function(result) {
-        eyes.inspect(result);
-        console.log(result.quotes.quote)
-        res.render('market', {res: result.quotes.quote[0]})
+  res.render('market')
+})
+
+router.post('/tradier', function(req,res,next){
+  var query = req.body.search;
+    var req = unirest.get("https://sandbox.tradier.com/v1/markets/quotes?symbols=" + query)
+      .header("Authorization", process.env.KEY2)
+      .header("X-Mashape-Key", process.env.KEY3)
+      .header("Accept", "text/plain")
+      .end(function (result) {
+        parser.on('end', function(result) {
+          eyes.inspect(result);
+          console.log(result.quotes.quote)
+          res.render('market', {res: result.quotes.quote[0]})
+        });
+        var response = parser.parseString(result.body)
       });
-  var response = parser.parseString(result.body)
-});
 });
 
 

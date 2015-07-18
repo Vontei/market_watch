@@ -1,24 +1,34 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  width: 75%;
+  margin: 0 auto; }
+
+#mainNav ul li {
+  margin-right: 25px;
+  display: inline-block;
+  padding-left: 0;
+  margin-left: 0; }
+
+#mainNav ul {
+  padding-left: 0; }
 
 a {
-  color: #00B7FF;
-}
+  color: #00B7FF; }
 
-table{
-  width: 75%;
+table {
+  width: 100%;
   text-align: center;
-  border: 1px solid black;
-}
+  border: 1px solid black; }
 
-thead{
-  background-color: grey;
+thead {
+  background-color: #332f30;
   border: 1px solid black;
-  color: white;
-}
+  color: white; }
 
-tr:nth-of-type(even){
-  background-color: yellow;
-}
+tr:nth-of-type(even) {
+  background-color: #a9b0b8; }
+
+td:nth-child(7), td:nth-child(3) {
+  color: #29f607; }
+
+td:nth-child(2), td:nth-child(6) {
+  color: #d71d1d; }

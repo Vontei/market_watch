@@ -1,0 +1,29 @@
+$darkGrey: rgb(51, 47, 48);
+$lightGrey: rgb(169, 176, 184);
+$green: rgb(41, 246, 7);
+$red: rgb(215, 29, 29);
+
+
+a {
+  color: #00B7FF;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+  }
+ thead{
+    background-color: $darkGrey;
+    border: 1px solid black;
+    color: white;
+  }
+    tr:nth-of-type(even){
+      background-color: $lightGrey;
+    }
+      td:nth-child(7), td:nth-child(3){
+        color: $green;
+      }
+      td:nth-child(2), td:nth-child(6){
+        color: $red;
+      }
