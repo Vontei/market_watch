@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  h1 Portfolio
+  a(href='/tradier') MARKET
+  form(action='/' method='post')
+    label Stock Search
+    input(type='text' name='search')
+
+  div
+    if res
+      table  
+        thead
+          td SYMBOL
+          td BID
+          td ASK
+          td OPEN
+          td CLOSE
+          td LOW
+          td HIGH
+          td VOLUME
+        each val in res
+          tr
+            td= val.symbol
+            td= val.bid
+            td= val.ask
+            td= val.open
+            td= val.close
+            td= val.low
+            td= val.high
+            td= val.volume
+          

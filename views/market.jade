@@ -1,0 +1,17 @@
+extends layout
+
+block content
+
+
+  h1 TRADIER
+  a(href='/') Back
+  br
+  if res
+    p Symbol:
+      | #{res.symbol}
+    p= res.bid
+    p= res.ask
+    h4 Full Response Below
+    each val in res
+      p= val
+      p= val.symbol

@@ -1,0 +1,24 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table{
+  width: 75%;
+  text-align: center;
+  border: 1px solid black;
+}
+
+thead{
+  background-color: grey;
+  border: 1px solid black;
+  color: white;
+}
+
+tr:nth-of-type(even){
+  background-color: yellow;
+}
