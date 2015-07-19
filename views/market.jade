@@ -1,15 +1,18 @@
 extends layout
 
 block content
-
-  h1 TRADIER
-  a(href='/') Back
+  div(class ='mainNav')
+    ul
+      li 
+        h1 √ Tradier
+      li
+        form(action='/tradier' method='post')
+          input(type='text' name='search' placeholder='Ticker Search')  
+      li
+        a(href='/') Home
   br
   if warning
-    p= warning
-  form(action='/tradier' method='post')
-    label Ticket Search
-    input(type='text' name='search' placeholder='Ticker Search')        
+    p= warning      
   div(id='large') 
     if res
       table
@@ -20,13 +23,13 @@ block content
           td ASK
           td OPEN
           td CLOSE
-          td CHANGE
+          td CHANGE (Day)
           td LOW
           td HIGH
           td AVG VOLUME
           td 52 HIGH
           td 52 LOW
-          td % CHANGE
+          td % CHANGE (Day)
         tr
           td= res.symbol
           td= res.type

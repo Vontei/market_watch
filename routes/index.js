@@ -30,6 +30,7 @@ router.get('/tradier', function(req,res,next){
 
 router.post('/tradier', function(req,res,next){
   var query = req.body.search;
+    // var req = unirest.get("https://sandbox.tradier.com/v1/markets/events")
     var req = unirest.get("https://sandbox.tradier.com/v1/markets/quotes?symbols=" + query)
       .header("Authorization", process.env.KEY2)
       .header("X-Mashape-Key", process.env.KEY3)

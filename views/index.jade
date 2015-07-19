@@ -1,35 +1,36 @@
 extends layout
 
 block content
-  div(id='mainNav')
-    ul
-      li 
-        h1 √ Market Watch
-      li
-        form(action='/' method='post')
-          input(type='text' name='search' placeholder='Ticker Search')  
-      li
-        a(href='/tradier') MARKET
-  div(id='small')
-    if res
-      table 
-        thead
-          td SYMBOL
-          td BID
-          td ASK
-          td OPEN
-          td CLOSE
-          td LOW
-          td HIGH
-          td VOLUME
-        each val in res
-          tr
-            td= val.symbol
-            td= val.bid
-            td= val.ask
-            td= val.open
-            td= val.close
-            td= val.low
-            td= val.high
-            td= val.volume
-          
+  div(id='container')  
+    div(class ='mainNav')
+      ul
+        li 
+          h1 √ Market Watch
+        li
+          form(action='/' method='post')
+            input(type='text' name='search' placeholder='Ticker Search')  
+        li
+          a(href='/tradier') MARKET
+    div(id='small')
+      if res
+        table 
+          thead
+            td SYMBOL
+            td BID
+            td ASK
+            td OPEN
+            td CLOSE
+            td LOW
+            td HIGH
+            td VOLUME
+          each val in res
+            tr
+              td= val.symbol
+              td= val.bid
+              td= val.ask
+              td= val.open
+              td= val.close
+              td= val.low
+              td= val.high
+              td= val.volume
+            
