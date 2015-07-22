@@ -41,7 +41,7 @@ router.post('/tradier', function(req,res,next){
       .end(function (result) {
         parser.on('end', function(result) {
           eyes.inspect(result);
-          console.log(result.quotes.quote)
+          // console.log(result.quotes.quote)
           res.render('market', {res: result.quotes.quote[0]})
         });
         var response = parser.parseString(result.body)
