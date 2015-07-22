@@ -1,36 +1,41 @@
 extends layout
 
 block content
-  div(id='container')  
-    div(class ='mainNav')
-      ul
-        li 
-          h1 √ Market Watch
-        li
-          form(action='/' method='post')
-            input(type='text' name='search' placeholder='Ticker Search')  
-        li
-          a(href='/tradier') MARKET
-    div(id='small')
-      if res
-        table 
-          thead
-            td SYMBOL
-            td BID
-            td ASK
-            td OPEN
-            td CLOSE
-            td LOW
-            td HIGH
-            td VOLUME
-          each val in res
-            tr
-              td= val.symbol
-              td= val.bid
-              td= val.ask
-              td= val.open
-              td= val.close
-              td= val.low
-              td= val.high
-              td= val.volume
-            
+  body
+    video(autoplay width='100%' height='100%' poster="/images/cornfield_close_up.mov" id="bgvid" loop)
+      source(src="/images/cornfield_close_up.mov" type="video/mp4")
+    div(id='container')  
+      div(class ='mainNav')
+        ul
+          li 
+            h1 √ Market Watch
+          li
+            form(action='/' method='post')
+              input(type='text' name='search' placeholder='Ticker Search')  
+          li
+            a(href='/tradier') MARKET
+          li
+            a(href='/') HOME
+      div(id='small')
+        if res
+          table 
+            thead
+              td SYMBOL
+              td BID
+              td ASK
+              td OPEN
+              td CLOSE
+              td LOW
+              td HIGH
+              td VOLUME
+            each val in res
+              tr
+                td= val.symbol
+                td= val.bid
+                td= val.ask
+                td= val.open
+                td= val.close
+                td= val.low
+                td= val.high
+                td= val.volume
+              

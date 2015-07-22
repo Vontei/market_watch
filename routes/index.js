@@ -3,11 +3,14 @@ var router = express.Router();
 var unirest = require('unirest');
 var eyes = require('eyes')
 var xml2js = require('xml2js');
-
 var parser = new xml2js.Parser();
 
 
-router.get('/', function(req, res, next) {
+router.get('/', function(req,res,next){
+  res.render('home')
+})
+
+router.get('/index', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
 

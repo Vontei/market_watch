@@ -1,0 +1,61 @@
+body{
+  margin: 0;
+  margin-bottom: -150px;
+  margin-top: 175px;
+}
+
+
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+/*background: url('images/The-dark-forest-at-night.mp4') no-repeat;*/
+background-size: cover;
+transition: 1s opacity;
+z-index: -3;
+}
+
+#welcome{
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  /*background-color: rgba(254, 255, 255, .2);*/
+  z-index: -2;
+}
+
+h1{
+  margin-bottom: 20px;
+  font-size: 8em;
+  color: white;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  z-index: -1;
+  color: rgba(6, 6, 11,.6);
+     /*-webkit-text-fill-color: white;
+     -webkit-text-stroke-width: .5px;
+     -webkit-text-stroke-color: rgb(148, 254, 29);*/
+}
+
+#enterButton{
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  width: 180px;
+  height:50px;
+  /*border: 2px solid rgba(6, 6, 11,.6);*/
+  margin-top: 40px;
+}
+#enter{
+  text-align: center;
+  text-decoration: none;
+  color: rgba(6, 6, 11,.6);
+  font-size: 2em;
+  font-family: 'Ubuntu', sans-serif;
+}

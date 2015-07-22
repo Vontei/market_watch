@@ -1,7 +1,8 @@
-body{
+
+
+#container{
   width:75%;
   margin: 0 auto;
-
 }
 
 
@@ -14,4 +15,21 @@ body{
 
 .mainNav ul{
   padding-left: 0;
+}
+
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+/*background: url('images/The-dark-forest-at-night.mp4') no-repeat;*/
+background-size: cover;
+transition: 1s opacity;
+z-index: -3;
 }

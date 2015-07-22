@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/home.css')
+    link(href='http://fonts.googleapis.com/css?family=Ubuntu:400,500' rel='stylesheet' type='text/css')
+  body
+
+  video(autoplay width='100%' height='100%' poster="/images/golden_wheat_field.mov" id="bgvid" loop)
+    source(src="/images/golden_wheat_field.mov" type="video/mp4")
+
+
+  div(id='welcome')
+    div
+      h1(id='grockr') grockr
+      img(src="https://openclipart.org/download/12987/nicubunu-Bananas.svg"  height='200' width='200' alt='Banana')
+      img(src="https://openclipart.org/download/8538/Gerald-G-Simple-Fruit-FF-Menu-5.svg"  height='210' width='210' alt='Apple')
+      img(src="https://openclipart.org/download/204479/Jerrican.svg"  height='200' width='200' alt='fuel')
+    div(id='enterButton')
+      a(href='/index' id='enter')  ENTER
