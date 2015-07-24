@@ -15,7 +15,6 @@ router.get('/index', function(req, res, next) {
 });
 
 
-
 router.post('/', function(req,res,next){
   var query = req.body.search;
   var req = unirest.get('http://www.enclout.com/api/v1/yahoo_finance/show.json?auth_token=' + process.env.KEY + '&text=' + query)
@@ -31,6 +30,10 @@ router.get('/tradier', function(req,res,next){
   res.render('market')
 })
 
+
+
+
+
 router.post('/tradier', function(req,res,next){
   var query = req.body.search;
     // var req = unirest.get("https://sandbox.tradier.com/v1/markets/events")
@@ -41,7 +44,6 @@ router.post('/tradier', function(req,res,next){
       .end(function (result) {
         parser.on('end', function(result) {
           eyes.inspect(result);
-          // console.log(result.quotes.quote)
           res.render('market', {res: result.quotes.quote[0]})
         });
         var response = parser.parseString(result.body)
@@ -49,6 +51,9 @@ router.post('/tradier', function(req,res,next){
 });
 
 
+
+
+///request variable sets the setTimeout counter to 0
 
 
 

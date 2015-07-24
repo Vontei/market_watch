@@ -10,3 +10,11 @@
 //     else{balance.innerHTML=res}
 //   })
 // startAccount.send(null);
+
+
+///client side ajax (ibmwat) send=-> rss based on query
+///return (sentiment) scale, assign scale to face
+///
+
+///information received => market(price) => draw()line to graphical point
+///graph on show page
