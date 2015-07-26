@@ -4,7 +4,7 @@ var unirest = require('unirest');
 var eyes = require('eyes')
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
-
+var stock = require('../lib/logic.js');
 
 router.get('/', function(req,res,next){
   res.render('home')

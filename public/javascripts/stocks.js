@@ -10,7 +10,3 @@
 //     else{balance.innerHTML=res}
 //   })
 // startAccount.send(null);
-
-//watson
-//canvas
-//
